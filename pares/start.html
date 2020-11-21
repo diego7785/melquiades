@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>Pares</title>
+		<style>
+			body{
+				height:100%vh;
+				width:100%vw;
+				background-color:#121224;
+			}
+
+
+			#pop{
+				position:absolute;
+				height:90%;
+				width:90%;
+				top:3.5%;
+				left:3.5%;
+				background-color:#1BB2A6;
+				border: solid #41A59E 15px;
+				border-radius: 50px;
+			}
+
+			#texto{
+				position:absolute;
+				width:90%;
+				left:5%;
+				top:20%;
+				pointer-events: none;
+			}
+
+			#boton{
+				position:absolute;
+				width:18%;
+				top:60%;
+				left:40%;
+				outline: none;
+			}
+
+			#boton:hover{
+				left:39.5%;
+				width:19%;
+			}
+
+			#close{
+				width: 3vw;
+			}
+
+			#rec{
+				position: absolute;
+				font-family: 'Nunito', sans-serif;
+				color: white;
+				font-size: large;
+				bottom: 5%;
+				right: 2%;
+			}
+
+			@media screen and (min-width: 320px) and (orientation: portrait) {
+				#pop{
+					position:absolute;
+					height:90%;
+					width:90%;
+					top:4%;
+					left:3.5%;
+					background-color:#1BB2A6;
+					border: solid #41A59E 15px;
+					border-radius: 50px;
+				}
+
+
+				#texto{
+					position:absolute;
+
+					height:12%;
+					left:5%;
+					top:30%;
+					pointer-events: none;
+				}
+
+
+				#boton{
+					position:absolute;
+					width:35%;
+					top:60%;
+					left:32.5%;
+				}
+
+				#boton:hover{
+					left:31.5%;
+					width:36%;
+				}
+
+				#close{
+					width: 5vw;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="pop">
+			<img src="assets/img/cerrar.png" id="close" onclick="window.close()">
+			<input id="texto" type="image" src="assets/img/texto.png">
+			<input id="boton" type="image" src="assets/img/jugar.png">
+			<div id="rec">*Apto para todo tipo de público</div>
+		</div>
+	</body>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+	<script>
+		$('#boton').click(function(){
+			window.location.assign("juego.html");
+		})
+	</script>
+</html>

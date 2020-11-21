@@ -1,0 +1,629 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+body {
+	width:100%vw;
+	height:100%vh;
+  	background: url('../img/descarga.jpg');
+  	color: white;
+  	font-family: arial;
+}
+
+body header {
+    position:absolute;
+    width: 100%;
+	height: 100%;
+}
+
+body header .timer {
+	position: absolute;
+	top: 13%;
+	right: 5%;
+	font-size: 23px;
+	background: #FFAD29;
+	width: 65px;
+	height: 65px;
+	line-height: 10%;
+	border-radius: 100%;
+	text-align: center;
+}
+
+body header .timer #textTimer{
+	margin-top:50%;
+}
+
+ #reset {
+	position: absolute;
+	top: 27%;
+	right: 5%;
+	width: 65px;
+	height: 65px;
+	border: none;
+	border-radius: 50px 50px;
+	background-position: center;
+	outline: none;
+	background-repeat: no-repeat;
+	image-rendering: crisp-edges;
+	-webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+
+ #informacion {
+	position: absolute;
+	top: 42%;
+	right: 5%;
+
+	width: 65px;
+	height: 65px;
+
+	border-radius: 4vh;
+	outline: none;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#dato{
+	display:none;
+	position:absolute;
+	right:8%;
+	top:50%;
+	border:none;
+	outline: none;
+	z-index:999999;
+	width:20%;
+
+}
+
+#dato.active{
+	display:block;
+}
+
+
+#ganaste{
+	display:none;
+	position:absolute;
+	width:60vw;
+	height:auto;
+	left:20%;
+	top:13%;
+
+	z-index:999999;
+}
+#ganaste1{
+	display:none;
+	position:absolute;
+	width:60vw;
+	height:auto;
+	left:20%;
+	top:13%;
+
+	z-index:999999;
+}
+
+#ganaste2{
+	display:none;
+	position:absolute;
+	width:60vw;
+	height:auto;
+	left:20%;
+	top:13%;
+
+	z-index:999999;
+}
+
+#next{
+	display:none;
+	position:absolute;
+	width: 2vw;
+	height: auto;
+	right:22%;
+	bottom:12%;
+	z-index:999999;
+	cursor: pointer;
+}
+
+#back{
+	transform: rotateZ(180deg);
+	display:none;
+	position:absolute;
+	width: 2vw;
+	height: auto;
+	left:22%;
+	bottom:12%;
+	z-index:999999;
+	cursor: pointer;
+}
+
+#next.active{
+	display:block;
+}
+
+#back.active{
+	display:block;
+}
+
+#ganaste.active{
+	display:block;
+}
+
+#ganaste1.active{
+	display:block;
+}
+
+#ganaste2.active{
+	display:block;
+}
+
+#cerrar{
+	display:none;
+	position: absolute;
+	right:22%;
+	top:15%;
+
+	width:3vw;
+	height: auto;
+	z-index:999999;
+}
+
+#cerrar.active{
+	display:block;
+}
+
+header .game {
+	position: absolute;
+	top: 10%;
+	left:12.5%;
+	width:80%;
+  	height: 80%;
+}
+
+#ganastext{
+	display: none;
+	position: absolute;
+	font-family: 'Nunito', sans-serif;
+	font-size: xx-large;
+	left:45%;
+	top: 2%;
+}
+
+#perdiste{
+	display: none;
+	position: absolute;
+	font-family: 'Nunito', sans-serif;
+	font-size: xx-large;
+	left:40%;
+	top: 2%;
+}
+
+#ganastext.active{
+	display:block;
+}
+
+#perdiste.active{
+	display:block;
+}
+
+
+@media screen and (min-width: 180px) and (orientation: portrait){
+
+  	header .game {
+		height: 80%;
+		width: 80%;
+		top: 16%;
+		left:10%;
+  	}
+
+  	#ganaste{
+		display:none;
+		position:absolute;
+		left:5%;
+		width:90vw;
+		height:auto;
+		top:30%;
+		z-index:999999;
+	}
+
+	#ganaste1{
+		display:none;
+		position:absolute;
+		left:5%;
+		width:90vw;
+		height:auto;
+		top:30%;
+		z-index:999999;
+	}
+
+	#ganaste2{
+		display:none;
+		position:absolute;
+		left:5%;
+		width:90vw;
+		height:auto;
+		top:30%;
+		z-index:999999;
+	}
+
+	#ganastext{
+		display: none;
+		position:absolute;
+		top: 20%;
+		left: 32%;
+		z-index:9999999;
+		color: white;
+	}
+
+	#perdiste{
+		display: none;
+		position:absolute;
+		top: 20%;
+		left: 8%;
+		z-index:9999999;
+		color: white;
+	}
+
+	#next{
+		display:none;
+		position:absolute;
+		width: 2vw;
+		height: auto;
+		right:6%;
+		bottom:40%;
+		z-index:999999;
+		cursor: pointer;
+	}
+
+	#back{
+		transform: rotateZ(180deg);
+		display:none;
+		position:absolute;
+		width: 2vw;
+		height: auto;
+		left:6%;
+		bottom:40%;
+		z-index:999999;
+		cursor: pointer;
+	}
+
+	#cerrar{
+		display:none;
+		position:absolute;
+		right:9%;
+		top:31%;
+		width:4vw;
+		height: auto;
+		z-index:999999;
+	}
+
+	header .flip-container {
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		perspective: 1000;
+		height: 15%;
+
+		margin: 4.5% 2.5%;
+		cursor: pointer;
+	}
+
+	#dato{
+		display:none;
+		position:absolute;
+		right:14%;
+		width:80%;
+		top:8%;
+		border:none;
+		outline: none;
+		z-index:999999;
+
+	}
+	#reset{
+		left: 32%;
+		top:5%;
+
+		width:50px;
+		height:50px;
+	}
+
+	#informacion{
+		top:5%;
+		right:11%;
+		width:50px;
+		height:50px;
+	}
+	body header .timer{
+		left: 13%;
+		top:5%;
+
+		width:50px;
+		height:50px;
+	}
+
+
+
+}
+
+@media screen and (max-height: 640px) and (orientation: landscape){
+
+  header .game {
+		height: 80%;
+		width: 50%;
+		top: 3%;
+		left:20%;
+	}
+
+	header .flip-container {
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		perspective: 1000;
+		height: 20%;
+
+		margin: 2.5% 2%;
+		cursor: pointer;
+
+	}
+
+	#ganaste{
+		display:none;
+		position:absolute;
+		left:10%;
+		width:80vw;
+		height:auto;
+		top:5%;
+		z-index:999999;
+	}
+
+	#ganaste1{
+		display:none;
+		position:absolute;
+		left:10%;
+		width:80vw;
+		height:auto;
+		top:5%;
+		z-index:999999;
+	}
+
+	#ganaste2{
+		display:none;
+		position:absolute;
+		left:10%;
+		width:80vw;
+		height:auto;
+		top:5%;
+		z-index:999999;
+	}
+
+	#ganastext{
+		display: none;
+		position:absolute;
+		top: 83%;
+		left: 38%;
+		z-index:9999999;
+		color: black;
+	}
+
+	#perdiste{
+		display: none;
+		position:absolute;
+		top: 83%;
+		left: 25%;
+		z-index:9999999;
+		color: black;
+	}
+
+	#next{
+		display:none;
+		position:absolute;
+		width: 2vw;
+		height: auto;
+		right:11%;
+		bottom:9%;
+		z-index:999999;
+		cursor: pointer;
+	}
+
+	#back{
+		transform: rotateZ(180deg);
+		display:none;
+		position:absolute;
+		width: 2vw;
+		height: auto;
+		left:11%;
+		bottom:9%;
+		z-index:999999;
+		cursor: pointer;
+	}
+
+	#cerrar{
+		display:none;
+		position:absolute;
+		right:14%;
+		top:10%;
+		width:3vw;
+		height: auto;
+		z-index:999999;
+	}
+
+	#dato{
+		display:none;
+		position:absolute;
+		right:8%;
+		width:35%;
+		top:38%;
+		border:none;
+		outline: none;
+		z-index:999999;
+	}
+
+	#reset{
+		right: 2.5%;
+		top:43%;
+
+		width:50px;
+		height:50px;
+	}
+
+	#informacion{
+		top:25%;
+		right:2.5%;
+		width:50px;
+		height:50px;
+	}
+
+	body header .timer{
+		right: 2.5%;
+		top:7%;
+		font-size:30px;
+		width:50px;
+		height:50px;
+		border-radius:100%;
+		line-height: 6%;
+		text-align: center;
+	}
+
+}
+
+
+@media screen and (min-height: 1023px) and (orientation: portrait){
+	body header .timer {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		font-size: 30px;
+		background: #FFAD29;
+		width: 65px;
+		height: 65px;
+		line-height: 6%;
+		border-radius: 100%;
+		text-align: center;
+	}
+
+}
+
+@media screen and (min-height: 1300px) and (orientation: portrait){
+	body header .timer {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		font-size: 23px;
+		background: #FFAD29;
+		width: 65px;
+		height: 65px;
+		line-height: 5%;
+		border-radius: 100;
+		text-align: center;
+	}
+
+}
+
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  height: 22%;
+
+  margin: 1.5% 1.5%;
+  cursor: pointer;
+}
+
+.flip-container.flip .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 20%;
+  height:20%;
+  float: left;
+  border-radius: 12px;
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 110%;
+  position: relative;
+}
+
+.flipper .front, .flipper .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -ms-backface-visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80%;
+  box-shadow: #FFCCA9 0 8px 2px;
+}
+
+.flipper .front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  background: #483D8B;
+  left:17%;
+}
+
+.flipper .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  border: 1px solid #E8E8E8;
+}
+
+#leon {
+  background: white url("../img/cromosomas.jpg") no-repeat center;
+  background-size: contain;
+}
+
+#aguila {
+  background: white url("../img/metafase.png") no-repeat center;
+  background-size: contain;
+}
+
+#cebra {
+  background: white url("../img/profase.jpg") no-repeat center;
+  background-size: contain;
+}
+
+#cocodrilo {
+  background: white url("../img/telofaseI.png") no-repeat center;
+  background-size: contain;
+}
+
+#elefante {
+  background: white url("../img/telofaseII.jpg") no-repeat center;
+  background-size: contain;
+}
+
+#jirafa {
+  background: white url("../img/DrosophilaI.jpg") no-repeat center;
+  background-size: contain;
+}
+
+#mariquita {
+  background: white url("../img/DrosophilaII.jpeg") no-repeat center;
+  background-size: contain;
+}
+
+#perro {
+  background: white url("../img/DrosophilaIII.jpeg") no-repeat center;
+  background-size: contain;
+}
